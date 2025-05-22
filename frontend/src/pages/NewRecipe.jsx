@@ -13,7 +13,7 @@ function NewRecipePage() {
         const formData = new FormData(e.target);
 
         try {
-            await fetch("http://localhost:8080/api/v1/save-recipe", {
+            await fetch("https://recipes-spring-boot.onrender.com/api/v1/save-recipe", {
                 method: "POST",
                 body: formData
             });

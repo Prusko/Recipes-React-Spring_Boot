@@ -21,7 +21,7 @@ function NavigationBar() {
       setSearchedRecipes([])
     } else {
       try {
-        await axios.get(`http://localhost:8080/api/v1/recipe/title=${search}`)
+        await axios.get(`https://recipes-spring-boot.onrender.com/api/v1/recipe/title=${search}`)
           .then(res => { console.log(res.data); setSearchedRecipes(res.data) })
       } catch (error) {
         alert("Valami Hiba történt a lekérdezés során.")
@@ -52,7 +52,7 @@ function NavigationBar() {
                         setSearchedRecipes([]);
                     } else {
                         try {
-                            const res = await axios.get(`http://localhost:8080/api/v1/recipe/title=${value}`);
+                            const res = await axios.get(`https://recipes-spring-boot.onrender.com/api/v1/recipe/title=${value}`);
                             setSearchedRecipes(res.data);
                         } catch (error) {
                             setSearchedRecipes([]);

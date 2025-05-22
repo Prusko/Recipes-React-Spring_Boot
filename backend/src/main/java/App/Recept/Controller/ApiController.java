@@ -20,7 +20,7 @@ import App.Recept.Service.RecipeService;
 
 @RestController
 @RequestMapping("/api/v1")
-@CrossOrigin("http://localhost:3000")
+@CrossOrigin("https://recipes-react-l134.onrender.com")
 public class ApiController {
     private RecipeService recipeService;
 

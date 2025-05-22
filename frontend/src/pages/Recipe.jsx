@@ -13,7 +13,7 @@ function Recipe() {
     const [recipe, setRecipe] = useState(null);
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/v1/recipe/${id}`)
+        axios.get(`https://recipes-spring-boot.onrender.com/api/v1/recipe/${id}`)
             .then(res => { console.log(res.data); setRecipe(res.data); });
     }, [id]);
 
@@ -26,7 +26,7 @@ function Recipe() {
     const handleDelete = async () => {
         if (window.confirm("Want to Delete?")) {
             try {
-                await axios.delete(`http://localhost:8080/api/v1/delete/${id}`);
+                await axios.delete(`https://recipes-spring-boot.onrender.com/api/v1/delete/${id}`);
                 navigate("/");
             } catch (error) {
                 alert("Hiba történt a törlés során!");
